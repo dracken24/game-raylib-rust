@@ -3,17 +3,13 @@
 /*               -------------------------------------------------                 */
 /*                PROJET: Rust Game          PAR: Dracken24                        */
 /*               -------------------------------------------------                 */
-/*                CREATED: 12-3rd-2025                                             */
+/*                CREATED: 19-3rd-2025                                             */
 /*                MODIFIED BY: Dracken24                                           */
-/*                LAST MODIFIED: 12-3rd-2025                                       */
+/*                LAST MODIFIED: 19-3rd-2025                                       */
 /*               -------------------------------------------------                 */
-/*                FILE: mod.rs                                                     */
+/*                FILE: lib.rs                                                     */
 /*               -------------------------------------------------                 */
 /* ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~--- */
 /* =============================================================================== */
 
-// Rend le contenu du fichier core.rs accessible
 pub mod core;
-
-// Réexporte la structure Core pour la rendre accessible directement
-pub use self::core::Core;

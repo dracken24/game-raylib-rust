@@ -1,7 +1,7 @@
 /* =============================================================================== */
 /* ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~--- */
 /*               -------------------------------------------------                 */
-/*                PROJET: Java Dev          PAR: Dracken24                         */
+/*                PROJET: Rust Game          PAR: Dracken24                        */
 /*               -------------------------------------------------                 */
 /*                CREATED: 12-3rd-2025                                             */
 /*                MODIFIED BY: Dracken24                                           */
@@ -16,8 +16,10 @@ use raylib::prelude::*;
 
 pub struct Core
 {
-    pub rayLib: RaylibHandle,
+    pub raylib: RaylibHandle,
     pub thread: RaylibThread,
+
+    pub center_position: Vector2
 }
 
 impl Core
@@ -29,22 +31,28 @@ impl Core
             .title("Untitled RPG Game")
             .build();
 
+        let center = Vector2 {
+            x: rl.get_screen_width() as f32 / 2.0,
+            y: rl.get_screen_height() as f32 / 2.0,
+        };
+
         Core
         {
-            rayLib: rl,
+            raylib: rl,
             thread: thread,
+            center_position: center
         }
     }
 
     // Ajout d'une méthode pour vérifier si la fenêtre doit se fermer
     pub fn should_close(&self) -> bool
     {
-        self.rayLib.window_should_close()
+        return self.raylib.window_should_close()
     }
 
     // Méthode pour commencer le dessin
     pub fn begin_drawing(&mut self) -> RaylibDrawHandle
     {
-        self.rayLib.begin_drawing(&self.thread)
+        return self.raylib.begin_drawing(&self.thread)
     }
 }

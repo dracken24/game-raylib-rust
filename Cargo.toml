@@ -3,5 +3,13 @@ name = "game-raylib-rust"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "game_raylib_rust"
+path = "src/lib.rs"
+
+[[bin]]
+name = "game-raylib-rust"
+path = "src/main.rs"
+
 [dependencies]
 raylib = "5.0.0"

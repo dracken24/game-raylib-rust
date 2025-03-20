@@ -1,7 +1,6 @@
 {
     "workbench.colorTheme": "Aura Dark",
     "editor.minimap.enabled": true,
-    "terminal.integrated.shell.windows": "c:/Program Files/PowerShell/7/pwsh.exe",
     "terminal.integrated.fontWeight": "1",
     "editor.fontFamily": "'Fira Code', 'Consolas', 'Courier New', monospace",
     "editor.fontSize": 18,
@@ -108,7 +107,7 @@
                     "===============================================================================",
                     "---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---",
                     "              -------------------------------------------------",
-                    "               PROJET: Java Dev          PAR: <<author>>",
+                    "               PROJET: Rust Game          PAR: <<author>>",
                     "              -------------------------------------------------",
                     "               CREATED: <<createdate>>",
                     "               MODIFIED BY: <<author>>",

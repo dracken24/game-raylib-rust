@@ -1,0 +1,7 @@
+[package]
+name = "players"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+my_library = { path = "~/code/my_library" }

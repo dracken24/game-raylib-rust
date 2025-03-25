@@ -14,12 +14,15 @@
 
 use raylib::prelude::*;
 
+#[path = "../player/player.rs"] mod player;
+use player::*;
+
 pub struct Core
 {
     pub raylib: RaylibHandle,
     pub thread: RaylibThread,
 
-    pub center_position: Vector2
+    pub player: Player
 }
 
 impl Core
@@ -36,11 +39,11 @@ impl Core
             y: rl.get_screen_height() as f32 / 2.0,
         };
 
-        Core
+        return Core 
         {
             raylib: rl,
             thread: thread,
-            center_position: center
+            player: Player::new(center),
         }
     }
 

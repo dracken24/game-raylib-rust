@@ -12,13 +12,18 @@
 /* ---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~---~--- */
 /* =============================================================================== */
 
+#[path = "spritesheet.rs"] mod spritesheet;
+use spritesheet::*;
+
 use raylib::prelude::*;
 
 pub struct Player
 {
     pub position: Vector2,
     pub size: Vector2,
-    pub color: Color
+    pub color: Color,
+
+    // pub idle_front: Spritesheet
 }
 
 impl Player
@@ -30,7 +35,8 @@ impl Player
         return Player{
             position: pos,
             size: siz,
-            color: raylib::color::Color::BLUE
+            color: raylib::color::Color::BLUE,
+            // idle_front: Spritesheet::new(rl, thread, "assets/player/idle_front.png", 4)
         }
     }
 
